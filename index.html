@@ -5,26 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrition UI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="/">Nutrition</a>
-        <button>Open Search</button>
-        <form action="">
-            <label for="globalsearch">Search more</label>
-            <input type="search" id="globalsearch">
-            <button type="submit">Search</button>
+    <a class="skip-nav t-copy-large" href="#mainContent">Skip to main content</a>
+    <header class="header">
+        <a class="brand t-brand" href="/">Nutrition</a>
+        <button class="button-icon">
+            <span class="screen-reader-only">
+                Open Search
+            </span>
+            <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
+            </svg>
+        </button>
+        <!--TODO: Remove search-is-open and add it using JS-->
+        <form class="search search--is-open" action="">
+            <label class="screen-reader-only" for="globalsearch">Search more</label>
+            <input class="search__input t-body" type="search" id="globalsearch" placeholder="Avacados, turmeric, kale etc...">
+            <button class="button-icon search__submit" type="submit">
+                <span class="screen-reader-only">
+                    Search
+                </span>
+                <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
+                </svg>
+            </button>
         </form>
-        <nav>
+        <nav class="screen-reader-only">
             <a href="/food">Food</a>
             <a href="/health">Health</a>
             <a href="/low-carb">Low Carb</a>
             <a href="/nutrition">Nutrition</a>
+            <button>Menu</button>
+            <div>
+                <button>Close menu</button>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/food">Food</a>
+                    </li>
+                    <li>            
+                        <a href="/health">Health</a>
+                    </li>
+                    <li>            
+                        <a href="/low-carb">Low Carb</a>
+                    </li>
+                    <li>            
+                        <a href="/nutrition">Nutrition</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/submissions">Submissions</a>
+                    </li>
+                    <li>
+                        <a href="/careers">Careers</a>
+                    </li>
+                </ul>
+                <p>Connect</p>
+                <a href="/twitter">Twitter</a>
+                <a href="/faceboook">Facebook</a>
+            </div>
         </nav>
-        <button>Menu</button>
-    </header>
-    <main>
-        <article>
+        </header>
+        <main id="mainContent">
+            <article>
             <h1>20 Types of Berries and Their Health Benefits</h1>
             <h2>Blackberries</h2>
             <p>
@@ -37,11 +88,11 @@
                 in human intervention studies.
             </p>
             <p>
-                Studies also show that wild blackberries are 3 to 5 time highe in 
+                Studies also show that wild blackberries are 3 to 5 time high in 
                 polyphenols, so get outside and pick your own.
             </p>
-            <img src="assets/images/final/a-berry..." alt="Blueberries in a bowl">
-            <img src="assets/images/final/chia-pudding..." alt="Chia Pudding">        
+            <img src="assets/images/final/a-berry-full-glass-by-jess-watters-unsplash.jpg" alt="Blueberries in a bowl">
+            <img src="assets/images/final/chia-pudding-by-alex-loup-unsplash.jpg" alt="Chia Pudding">        
             <section>
                 <h3>Nutrition Information</h3>
                 <ul>
@@ -52,9 +103,9 @@
                 </ul>
             </section>
             <section>
-                <h3>Share</h3>
-                <a href="/twitter">Twitter</a>
-                <a href="/faceboook">Facebook</a>
+                <h3>Share this article</h3>
+                <a href="/twitter">Share on Twitter</a>
+                <a href="/faceboook">Share on Facebook</a>
             </section>
         </article>
         <aside>
