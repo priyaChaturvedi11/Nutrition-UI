@@ -11,67 +11,96 @@
     <a class="skip-nav t-copy-large" href="#mainContent">Skip to main content</a>
     <header class="header">
         <a class="brand t-brand" href="/">Nutrition</a>
-        <button class="button-icon">
-            <span class="screen-reader-only">
-                Open Search
-            </span>
-            <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
-            </svg>
-        </button>
-        <!--TODO: Remove search-is-open and add it using JS-->
-        <form class="search search--is-open" action="">
-            <label class="screen-reader-only" for="globalsearch">Search more</label>
-            <input class="search__input t-body" type="search" id="globalsearch" placeholder="Avacados, turmeric, kale etc...">
-            <button class="button-icon search__submit" type="submit">
+        <div class="header__center">
+            <button class="button-icon">
                 <span class="screen-reader-only">
-                    Search
+                    Open Search
                 </span>
-                <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="button-icon__icon" width="24" height="24" 
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
                     <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
                 </svg>
             </button>
-        </form>
-        <nav class="screen-reader-only">
-            <a href="/food">Food</a>
-            <a href="/health">Health</a>
-            <a href="/low-carb">Low Carb</a>
-            <a href="/nutrition">Nutrition</a>
-            <button>Menu</button>
-            <div>
-                <button>Close menu</button>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
+            <!--TODO: Remove search--is-open and add it using JS-->
+            <form class="search" action="">
+                <label class="screen-reader-only" for="globalsearch">Search more</label>
+                <input class="search__input t-body" type="search" id="globalsearch" placeholder="Avacados, turmeric, kale etc...">
+                <button class="button-icon search__submit" type="submit">
+                    <span class="screen-reader-only">
+                        Search
+                    </span>
+                    <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" 
+                    xmlns="http://www.w3.org/2000/svg" role="presentation">
+                        <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
+                    </svg>
+                </button>
+            </form>
+            <!--can have class screen-reader-only -->
+            <nav class="center-nav">
+                <ul class="center-nav__items">
+                    <li class="center-nav__item">
+                        <a class="t-link" href="/food">Food</a>
                     </li>
-                    <li>
-                        <a href="/food">Food</a>
+                    <li class="center-nav__item">
+                        <a class="t-link" href="/health">Health</a>
                     </li>
-                    <li>            
-                        <a href="/health">Health</a>
+                    <li class="center-nav__item">
+                        <a class="t-link" href="/low-carb">Low Carb</a>
                     </li>
-                    <li>            
-                        <a href="/low-carb">Low Carb</a>
-                    </li>
-                    <li>            
-                        <a href="/nutrition">Nutrition</a>
-                    </li>
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
-                    <li>
-                        <a href="/submissions">Submissions</a>
-                    </li>
-                    <li>
-                        <a href="/careers">Careers</a>
+                    <li class="center-nav__item">
+                        <a class="t-link" href="/nutrition">Nutrition</a>
                     </li>
                 </ul>
-                <p>Connect</p>
-                <a href="/twitter">Twitter</a>
-                <a href="/faceboook">Facebook</a>
-            </div>
+            </nav>            
+        </div>
+        <button class="button-icon">
+            <span class="t-copy-large">Menu</span>
+            <svg class="button-icon__icon menu-trigger__icon--small" 
+            width="24" height="20" viewBox="0 0 24 20" 
+            xmlns="http://www.w3.org/2000/svg" 
+            role="presentation">
+                <path d="M8 18h16v2H8zM0 0h16v2H0z"/>
+            </svg>
+            <svg class="button-icon__icon menu-trigger__icon--large"
+            width="52" height="24" viewBox="0 0 52 24" 
+            xmlns="http://www.w3.org/2000/svg"
+            role="presentation">
+                <path d="M16 20h36v2H16zM0 2h36v2H0z"/>
+              </svg>
+        </button>
+        <nav class="menu">
+            <button>Close menu</button>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/food">Food</a>
+                </li>
+                <li>            
+                    <a href="/health">Health</a>
+                </li>
+                <li>            
+                    <a href="/low-carb">Low Carb</a>
+                </li>
+                <li>            
+                    <a href="/nutrition">Nutrition</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/submissions">Submissions</a>
+                </li>
+                <li>
+                    <a href="/careers">Careers</a>
+                </li>
+            </ul>
+            <p>Connect</p>
+            <a href="/twitter">Twitter</a>
+            <a href="/faceboook">Facebook</a>
         </nav>
         </header>
         <main id="mainContent">
